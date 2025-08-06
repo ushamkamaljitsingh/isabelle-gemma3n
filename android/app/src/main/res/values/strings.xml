@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- App name and basic info -->
+    <string name="app_name">Isabelle</string>
+    <string name="app_description">AI-powered accessibility assistant for the deaf and blind community</string>
+    
+    <!-- Accessibility descriptions -->
+    <string name="accessibility_service_name">Isabelle Accessibility Service</string>
+    <string name="accessibility_service_description">Provides AI-powered assistance for deaf and blind users including speech recognition, text enhancement, and visual scene description.</string>
+    
+    <!-- Permissions -->
+    <string name="permission_microphone_title">Microphone Access</string>
+    <string name="permission_microphone_description">Required for speech recognition and transcription in deaf mode</string>
+    <string name="permission_camera_title">Camera Access</string>
+    <string name="permission_camera_description">Required for visual assistance and scene description in blind mode</string>
+    <string name="permission_location_title">Location Access</string>
+    <string name="permission_location_description">Required for emergency location sharing and local assistance</string>
+    
+    <!-- Emergency -->
+    <string name="emergency_call_button">Emergency Call</string>
+    <string name="emergency_message">Emergency assistance needed. This message was sent automatically by Isabelle accessibility app.</string>
+    
+    <!-- Modes -->
+    <string name="deaf_mode">Deaf Mode</string>
+    <string name="blind_mode">Blind Mode</string>
+    <string name="deaf_mode_description">Speech-to-text transcription and sound alerts</string>
+    <string name="blind_mode_description">Voice queries and camera vision assistance</string>
+    
+    <!-- Status messages -->
+    <string name="status_initializing">Initializing Isabelle...</string>
+    <string name="status_model_loading">Loading AI model...</string>
+    <string name="status_ready">Ready for assistance</string>
+    <string name="status_listening">Listening for speech...</string>
+    <string name="status_processing">Processing with AI...</string>
+    <string name="status_speaking">Speaking response...</string>
+    
+    <!-- Errors -->
+    <string name="error_model_not_found">AI model not found. Please check your installation.</string>
+    <string name="error_permission_denied">Permission denied. This feature requires additional permissions.</string>
+    <string name="error_camera_unavailable">Camera is not available on this device.</string>
+    <string name="error_microphone_unavailable">Microphone is not available on this device.</string>
+    <string name="error_network_unavailable">Network connection required for this feature.</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_speech_rate">Speech Rate</string>
+    <string name="settings_volume">Volume</string>
+    <string name="settings_emergency_contact">Emergency Contact</string>
+    
+    <!-- Actions -->
+    <string name="action_start_listening">Start Listening</string>
+    <string name="action_stop_listening">Stop Listening</string>
+    <string name="action_take_photo">Take Photo</string>
+    <string name="action_describe_scene">Describe Scene</string>
+    <string name="action_call_emergency">Call Emergency</string>
+    <string name="action_clear_text">Clear Text</string>
+    
+    <!-- Notifications -->
+    <string name="notification_sound_detected">Sound Detected</string>
+    <string name="notification_emergency_sound">Emergency Sound Detected</string>
+    <string name="notification_service_running">Isabelle is monitoring for sounds</string>
+    
+</resources>

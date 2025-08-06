@@ -1,0 +1,122 @@
+name: isabelle
+description: AI accessibility assistant for blind users
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State management
+  provider: ^6.1.1
+  
+  # Storage and preferences
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.1
+  package_info_plus: ^8.3.0
+  
+  # Camera functionality
+  camera: ^0.10.6
+  image: ^4.3.0
+  image_picker: ^1.1.2
+  
+  # Audio functionality - WORKING SET ONLY
+  speech_to_text: ^7.1.0  # Now working with v2 embedding - WILL BE REPLACED
+  flutter_tts: ^4.2.3     # Now working with v2 embedding
+  just_audio: ^0.9.46
+  # vosk_flutter: TEMPORARILY REMOVED - causing namespace issues
+  
+  # Offline audio recording for speech recognition
+  # record: ^4.4.4  # Temporarily disabled due to build issues
+  # audio_session: ^0.1.16
+  
+  # Permissions - Latest v2 embedding compatible version
+  permission_handler: ^11.4.0
+  
+  # Network and HTTP
+  http: ^1.4.0
+  dio: ^5.4.0
+  flutter_downloader: ^1.11.6
+  
+  # Emergency and communication
+  url_launcher: ^6.3.2
+  geolocator: ^10.1.1
+  geocoding: ^2.2.2
+  flutter_contacts: ^1.1.9
+  
+  # Phone and dialer functionality - using native channels instead of packages
+  
+  # Accessibility features - WORKING SET
+  vibration: ^2.1.0       # Now working with v2 embedding
+  torch_light: ^1.1.0
+  wakelock_plus: ^1.2.4
+  
+  # Notifications for background transcription
+  flutter_local_notifications: ^17.2.4
+  
+  # Crypto for model verification
+  crypto: ^3.0.3
+  
+  # Platform integration
+  device_info_plus: ^10.1.2
+  battery_plus: ^5.0.3
+  connectivity_plus: ^5.0.2
+  
+  # Text processing
+  string_similarity: ^2.0.0
+  
+  # AI and ML - using MediaPipe for LLM inference
+  google_mlkit_text_recognition: ^0.13.1
+  
+  # Error tracking
+  flutter_logs: ^2.2.1
+
+# ========================================
+# DEPENDENCY OVERRIDES FOR COMPATIBILITY
+# Core packages that work with v2 embedding
+# ========================================
+dependency_overrides:
+  # Core permissions
+  permission_handler: ^11.4.0
+  permission_handler_android: ^12.1.0
+  permission_handler_apple: ^9.4.7
+  
+  # Core audio - verified working
+  speech_to_text: ^7.1.0
+  flutter_tts: ^4.2.3
+  vibration: ^2.1.0
+  
+  # HTTP and networking
+  http: ^1.4.0
+  
+  # Platform packages
+  device_info_plus: ^10.1.2
+  battery_plus: ^5.0.3
+  connectivity_plus: ^5.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/models/
+    - assets/images/
+    - assets/sounds/
+    # Audio models removed - using Gemma 3n for all AI tasks
+  
+  # Custom fonts commented out until font files are added
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf
+  #         weight: 700

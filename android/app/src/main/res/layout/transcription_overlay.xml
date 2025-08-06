@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/transcription_overlay_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_call"
+            android:tint="#00CCAA" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:text="Live Call Transcription"
+            android:textColor="#00CCAA"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/recording_indicator"
+            android:layout_marginRight="4dp" />
+
+    </LinearLayout>
+
+    <!-- Transcription Text -->
+    <TextView
+        android:id="@+id/transcription_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waiting for speech..."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:background="@drawable/transcription_text_background"
+        android:padding="12dp" />
+
+</LinearLayout>

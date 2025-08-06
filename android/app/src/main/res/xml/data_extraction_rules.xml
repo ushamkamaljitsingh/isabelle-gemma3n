@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <!-- 
+    Privacy-First Data Extraction Rules for Isabelle
+    Prevents backup of sensitive AI model and user data
+    -->
+    
+    <cloud-backup>
+        <!-- Disable cloud backup entirely for privacy -->
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+    </cloud-backup>
+    
+    <device-transfer>
+        <!-- Disable device transfer for AI models and user data -->
+        <exclude domain="root" />
+        
+        <!-- Specifically exclude large AI model files -->
+        <exclude domain="file" path="models/" />
+        <exclude domain="file" path="*.task" />
+        <exclude domain="file" path="*.tflite" />
+        <exclude domain="file" path="*.bin" />
+        <exclude domain="file" path="gemma*" />
+        
+        <!-- Exclude user transcription data -->
+        <exclude domain="database" path="transcriptions.db" />
+        <exclude domain="database" path="conversations.db" />
+        
+        <!-- Exclude audio recordings -->
+        <exclude domain="file" path="audio/" />
+        <exclude domain="file" path="recordings/" />
+        
+        <!-- Exclude camera captures -->
+        <exclude domain="file" path="images/" />
+        <exclude domain="file" path="captures/" />
+        
+        <!-- Allow only essential app preferences -->
+        <include domain="sharedpref" path="flutter.settings" />
+        <include domain="sharedpref" path="accessibility_mode" />
+    </device-transfer>
+    
+</data-extraction-rules>
