@@ -122,7 +122,8 @@ class EmergencyCallManager(private val context: Context) {
     }
     
     /**
-     * Make an emergency call
+     * Make an emergency call using ACTION_CALL
+     * Does not require Default Phone App status
      */
     private suspend fun makeEmergencyCall(phoneNumber: String, description: String) {
         if (!hasCallPermission()) {
@@ -134,6 +135,7 @@ class EmergencyCallManager(private val context: Context) {
             try {
                 Log.w(TAG, "🚨 CALLING $description: $phoneNumber")
                 
+                // Use ACTION_CALL for direct emergency calling
                 val callIntent = Intent(Intent.ACTION_CALL).apply {
                     data = Uri.parse("tel:$phoneNumber")
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK
